@@ -1,0 +1,54 @@
+{
+    "name": "fredbradley/feedback",
+    "description": "My mildly awesome package",
+    "keywords": [
+        "fredbradley",
+        "feedback"
+    ],
+    "homepage": "https://github.com/fredbradley/feedback",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Fred Bradley",
+            "email": "hello@fredbradley.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fredbradley\\Feedback\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fredbradley\\Feedback\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fredbradley\\Feedback\\FeedbackServiceProvider"
+            ],
+            "aliases": {
+                "Feedback": "Fredbradley\\Feedback\\FeedbackFacade"
+            }
+        }
+    }
+}
