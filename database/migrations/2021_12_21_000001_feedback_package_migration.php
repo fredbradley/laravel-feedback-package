@@ -46,7 +46,7 @@ class FeedbackPackageMigration extends Migration
     {
         /**
          * Purposely empty, because this package can be added on multiple
-         * applications each pointing to the same database
+         * applications each pointing to the same database.
          */
     }
 }

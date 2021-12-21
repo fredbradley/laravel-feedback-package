@@ -5,9 +5,6 @@ namespace FredBradley\Feedback\Models;
 use FredBradley\Feedback\ModelInterface;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- *
- */
 class FeedbackSite extends Model implements ModelInterface
 {
     /**
@@ -26,7 +23,7 @@ class FeedbackSite extends Model implements ModelInterface
     ];
 
     /**
-     * @param  array  $attributes
+     * @param array $attributes
      */
     public function __construct(array $attributes = [])
     {
@@ -39,6 +36,6 @@ class FeedbackSite extends Model implements ModelInterface
      */
     public function records()
     {
-        return $this->hasMany(FeedbackRecord::class, "site_id");
+        return $this->hasMany(FeedbackRecord::class, 'site_id');
     }
 }
