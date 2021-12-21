@@ -1,6 +1,6 @@
 <?php
 
-namespace Fredbradley\Feedback;
+namespace FredBradley\Feedback;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Fredbradley\Feedback;
+namespace FredBradley\Feedback;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Fredbradley\Feedback\Skeleton\SkeletonClass
+ * @see \FredBradley\Feedback\Skeleton\SkeletonClass
  */
 class FeedbackFacade extends Facade
 {

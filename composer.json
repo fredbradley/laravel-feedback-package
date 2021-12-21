@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Fredbradley\\Feedback\\": "src"
+            "FredBradley\\Feedback\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Fredbradley\\Feedback\\Tests\\": "tests"
+            "FredBradley\\Feedback\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Fredbradley\\Feedback\\FeedbackServiceProvider"
+                "FredBradley\\Feedback\\FeedbackServiceProvider"
             ],
             "aliases": {
-                "Feedback": "Fredbradley\\Feedback\\FeedbackFacade"
+                "Feedback": "FredBradley\\Feedback\\FeedbackFacade"
             }
         }
     }

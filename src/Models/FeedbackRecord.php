@@ -1,11 +1,14 @@
 <?php
 
-namespace Fredbradley\Feedback\Models;
+namespace FredBradley\Feedback\Models;
 
 use Fredbradley\Feedback\ModelInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ *
+ */
 class FeedbackRecord extends Model implements ModelInterface
 {
     /**

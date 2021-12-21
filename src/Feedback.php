@@ -1,10 +1,9 @@
 <?php
 
-namespace Fredbradley\Feedback;
+namespace FredBradley\Feedback;
 
 class Feedback
 {
     // Build your next great package.
-
 
 }
