@@ -6,9 +6,6 @@ use FredBradley\Feedback\ModelInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/**
- *
- */
 class FeedbackRecord extends Model implements ModelInterface
 {
     /**
@@ -32,7 +29,7 @@ class FeedbackRecord extends Model implements ModelInterface
     ];
 
     /**
-     * @param  array  $attributes
+     * @param array $attributes
      */
     public function __construct(array $attributes = [])
     {

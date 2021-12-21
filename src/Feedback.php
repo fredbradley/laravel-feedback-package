@@ -10,7 +10,7 @@ use Illuminate\Support\Collection;
 class Feedback
 {
     /**
-     * @param  string|null  $url
+     * @param string|null $url
      *
      * @return \Illuminate\Support\Collection
      */
@@ -26,8 +26,8 @@ class Feedback
     }
 
     /**
-     * @param  array  $feedback
-     * @param  string|null  $furtherComments
+     * @param array       $feedback
+     * @param string|null $furtherComments
      *
      * @return FeedbackRecord
      */
@@ -47,7 +47,7 @@ class Feedback
     }
 
     /**
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      *
      * @return array
      */

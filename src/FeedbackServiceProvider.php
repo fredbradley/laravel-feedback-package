@@ -16,7 +16,7 @@ class FeedbackServiceProvider extends ServiceProvider
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'feedback');
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'feedback');
-         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
@@ -54,7 +54,7 @@ class FeedbackServiceProvider extends ServiceProvider
 
         // Register the main class to use with the facade
         $this->app->singleton('feedback', function () {
-            return new Feedback;
+            return new Feedback();
         });
     }
 }
