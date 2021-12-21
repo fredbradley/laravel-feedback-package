@@ -14,22 +14,31 @@ class FeedbackSite extends Model implements ModelInterface
      * @var array
      */
     protected $fillable = [
-        'name', 'url',
+        'name',
+        'url',
     ];
     /**
      * @var array
      */
     protected $casts = [
         'name' => 'string',
-        'url' => 'string',
+        'url'  => 'string',
     ];
 
     /**
-     * @param  string|null  $connection
+     * @param  array  $attributes
      */
-    public function setConnection(?string $connection): void
+    public function __construct(array $attributes = [])
     {
-        $connection = config('feedback.databaseConnection');
-        $this->connection = $connection;
+        parent::__construct($attributes);
+        $this->setConnection(config('feedback.databaseConnection'));
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function records()
+    {
+        return $this->hasMany(FeedbackRecord::class, "site_id");
     }
 }

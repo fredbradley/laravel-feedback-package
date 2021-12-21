@@ -2,7 +2,7 @@
 
 namespace FredBradley\Feedback\Models;
 
-use Fredbradley\Feedback\ModelInterface;
+use FredBradley\Feedback\ModelInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -25,19 +25,19 @@ class FeedbackRecord extends Model implements ModelInterface
      * @var array
      */
     protected $casts = [
-        'site_id' => 'integer',
-        'feedback' => 'json',
-        'client_meta' => 'json',
+        'site_id'        => 'integer',
+        'feedback'       => 'json',
+        'client_meta'    => 'json',
         'other_comments' => 'string',
     ];
 
     /**
-     * @param  string|null  $connection
+     * @param  array  $attributes
      */
-    public function setConnection(?string $connection): void
+    public function __construct(array $attributes = [])
     {
-        $connection = config('feedback.databaseConnection');
-        $this->connection = $connection;
+        parent::__construct($attributes);
+        $this->setConnection(config('feedback.databaseConnection'));
     }
 
     /**

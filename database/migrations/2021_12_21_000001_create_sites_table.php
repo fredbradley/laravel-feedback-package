@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSchoolsTable extends Migration
+class CreateSitesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class CreateSchoolsTable extends Migration
     public function up()
     {
         $connection = config('feedback.databaseConnection');
-        if (!Schema::connection($connection)->hasTable('sites')) {
-            Schema::connection($connection)->create('sites', function (Blueprint $table) {
+        if (!Schema::connection($connection)->hasTable('feedback_sites')) {
+            Schema::connection($connection)->create('feedback_sites', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name');
                 $table->longText('url');
