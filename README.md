@@ -4,8 +4,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/feedback.svg?style=flat-square)](https://packagist.org/packages/fredbradley/feedback)
 ![GitHub Actions](https://github.com/fredbradley/feedback/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
-
 ## Installation
 
 You can install the package via composer:
@@ -52,7 +50,24 @@ Feedback::log(
     ], 
     "I was also thinking it would be cool if you could flash the page pink when something fun happens, and perhaps animate some unicorns flying across the page!"
 );
-// When submitted the package will grab the UserAgent of the client that has submitted the feedback, along with the site url and site name (from config/app.php). 
+/**
+ * When submitted the package will grab the UserAgent of the client that has submitted the feedback, 
+ * along with the site url and site name (from config/app.php). It also saves the ID of the 
+ * Authenticatable model of your app. So you can track specific users giving specific
+ * feedback, so that you can give them a better user experience. 
+ */
+```
+#### Return Value Example
+```php
+FredBradley\Feedback\Models\FeedbackRecord {#3053
+     site_id: 1,
+     feedback: "{"Do you enjoy chocolate?":"Yes, I bloomin love it!","Would you eat more chocolate if you could":"Absolutely"}",
+     client_meta: "{"UserAgent":"Symfony","UserID":null}",
+     other_comments: "Can you send more more chocolate, please?",
+     updated_at: "2021-12-21 15:58:05",
+     created_at: "2021-12-21 15:58:05",
+     id: 1,
+   }
 ```
 
 ```php
