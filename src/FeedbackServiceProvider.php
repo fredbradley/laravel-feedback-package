@@ -14,7 +14,7 @@ class FeedbackServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'feedback');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'feedback');
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'feedback');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
@@ -35,9 +35,9 @@ class FeedbackServiceProvider extends ServiceProvider
             ], 'assets');*/
 
             // Publishing the translation files.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/feedback'),
-            ], 'lang');*/
+            ], 'lang');
 
             // Registering package commands.
             // $this->commands([]);
