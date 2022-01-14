@@ -2,7 +2,6 @@
 
 namespace FredBradley\Feedback\Commands;
 
-use App\Models\Contact;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
@@ -30,7 +29,7 @@ class Migrate extends Command
     public function handle()
     {
         $path = dirname(dirname(__DIR__)).'/database/migrations/2021_12_21_000001_feedback_package_migration.php';
-        $this->line("Migrating...");
+        $this->line('Migrating...');
         Artisan::call('migrate --database=laravel-feedback --path='.$path);
         $this->line('Done!');
     }

@@ -42,7 +42,7 @@ class FeedbackServiceProvider extends ServiceProvider
 
             // Registering package commands.
             $this->commands([
-                Migrate::class
+                Migrate::class,
             ]);
         }
     }
