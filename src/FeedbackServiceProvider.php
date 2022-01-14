@@ -2,6 +2,7 @@
 
 namespace FredBradley\Feedback;
 
+use FredBradley\Feedback\Commands\Migrate;
 use Illuminate\Support\ServiceProvider;
 
 class FeedbackServiceProvider extends ServiceProvider
@@ -40,7 +41,9 @@ class FeedbackServiceProvider extends ServiceProvider
             ], 'lang');
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                Migrate::class
+            ]);
         }
     }
 
