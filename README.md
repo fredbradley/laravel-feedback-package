@@ -34,10 +34,7 @@ You'll need to create a database and then add the connection to your app's `conf
 ],
 ```
 
-You can then run `php artisan migrate` which will create the necesary two tables into the database using THAT connection. If you're cautious you can pass the optional `--database` argument to that laravel command as follows: 
-```bash
-php artisan migrate --database=laravel-feedback
-```
+You can then run `php artisan feedback:migrate` which will create the necesary two tables into the database using THAT connection.
 
 ## Usage
 
